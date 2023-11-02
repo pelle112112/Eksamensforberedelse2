@@ -1,0 +1,23 @@
+GET localhost:7777/api/plants
+
+###
+
+GET localhost:7777/api/plants/3
+
+###
+
+GET localhost:7777/api/plants/type/Rose
+
+
+###
+
+POST localhost:7777/api/plants
+Content-Type: application/json
+
+{
+
+    "name": "Slaskeret",
+    "planttype": "Tulipan",
+    "maxheight": "178",
+    "price": "12.50"
+}
