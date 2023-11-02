@@ -2,7 +2,7 @@
 
 ## Task 1
 GET localhost:7777/api/plants
-
+````
 [
 {
 "id": 1,
@@ -47,8 +47,10 @@ GET localhost:7777/api/plants
 "price": 12.5
 }
 ]
+````
 ______________________________________________________
 GET localhost:7777/api/plants/3
+````
 {
 "id": 3,
 "planttype": "FruitAndBerries",
@@ -56,9 +58,10 @@ GET localhost:7777/api/plants/3
 "maxheight": 100,
 "price": 399.5
 }
+````
 ___________________________________________________________
 GET localhost:7777/api/plants/type/Rose
-
+````
 [
 {
 "id": 1,
@@ -75,17 +78,22 @@ GET localhost:7777/api/plants/type/Rose
 "price": 199.5
 }
 ]
+````
 ________________________________________________________________
 POST localhost:7777/api/plants
 Content-Type: application/json
 
+Request:
+````
 {
 "name": "Slaskeret",
 "planttype": "Tulipan",
 "maxheight": "178",
 "price": "12.50"
 }
-
+````
+Response:
+````
 {
 "id": 0,
 "planttype": "Tulipan",
@@ -93,11 +101,12 @@ Content-Type: application/json
 "maxheight": 178,
 "price": 12.5
 }
-
+````
 ## Task 2
 I have handled my errors, by creating an errorhandler and using it to control the errorcodes and messages.
 I have also created a custom exception.
 The errors are handled in the controller:
+
 GET localhost:7777/api/plants
 ```
 public Handler getAll() {
